@@ -20,7 +20,7 @@ pipeline {
             }
         }
         
-        stage ('soanrqube analysis') {
+        stage ('sonarqube analysis') {
             steps {
                 withSonarQubeEnv('sonar') {
                    sh ''' $SCANNER_HOME/bin/sonar-scanner -Dsonar.projectKey=code-quality-project -Dsonar.projectName=code-quality-project '''
